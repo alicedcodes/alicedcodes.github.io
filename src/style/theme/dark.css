@@ -1,0 +1,28 @@
+[data-theme="dark"] {
+  --colour-background: hsl(0, 0%, 20%);
+  --colour-menu: hsl(0, 0%, 10%);
+  --colour-menu-item: hsl(0, 0%, 20%);
+  --colour-menu-item-selected: hsl(0, 0%, 0%);
+
+  --colour-text: hsl(0, 0%, 95%);
+  --colour-link: hsl(330, 100%, 50%);
+  --colour-border: var(--colour-text);
+  --colour-menu-border: hsl(0, 0%, 30%);
+
+  background-color: var(--colour-background);
+  color: var(--colour-text);
+  color-scheme: dark;
+}
+
+a {
+  color: var(--colour-link);
+}
+
+th,
+td {
+  border-color: var(--colour-border);
+}
+
+hr {
+  background-color: var(--colour-border);
+}

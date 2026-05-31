@@ -1,0 +1,6 @@
+:root {
+  background-color: light-dark(#eee, #222);
+  color: light-dark(#222, #eee);
+  color-scheme: light dark;
+  font-family: "Courier New", Courier, monospace;
+}
