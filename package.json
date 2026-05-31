@@ -7,19 +7,19 @@
     "type": "git",
     "url": "git+https://github.com/alicedcodes/alicedcodes.github.io.git"
   },
-  "author": {
-    "name": "Alice Driscoll",
-    "email": "alicedcodes@gmail.com"
-  },
+  "author": "Alice Driscoll <alicedcodes@gmail.com>",
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build && cp dist/index.html dist/404.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^1.17.0",
     "modern-normalize": "^3.0.1",
     "react": "^19.2.6",

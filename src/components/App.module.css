@@ -4,6 +4,7 @@
   grid-template-columns: 15rem 1fr;
   grid-template-areas: "sidebar content";
   flex: auto;
+  overflow: auto;
 }
 
 .sidebar {
@@ -61,15 +62,18 @@
 .contentWrapper {
   display: flex;
   grid-area: content;
+  justify-content: center;
+  min-width: fit-content;
   overflow: auto;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   padding: 2.5rem 1rem;
-  width: min(70rem, 100%);
+  width: 100%;
+  min-width: 20rem;
+  max-width: 70rem;
   height: fit-content;
   overflow-wrap: break-word;
 }
