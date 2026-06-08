@@ -42,7 +42,7 @@ function Layout() {
     }[],
   ) => {
     return paths.map(({ path, label, icon: Icon }) => (
-      <NavLink to={path} className={styles.link}>
+      <NavLink key={label} to={path} className={styles.link}>
         <Icon className={styles.linkIcon} />
         <div>{label}</div>
       </NavLink>

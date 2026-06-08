@@ -13,16 +13,3 @@
   color: var(--colour-text);
   color-scheme: dark;
 }
-
-a {
-  color: var(--colour-link);
-}
-
-th,
-td {
-  border-color: var(--colour-border);
-}
-
-hr {
-  background-color: var(--colour-border);
-}
