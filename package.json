@@ -15,6 +15,7 @@
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "format": "prettier \"src/**/*.{ts,tsx,css}\"",
+    "generate-icons": "node bin/generate-icons",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -40,6 +41,8 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
+    "sharp": "^0.35.1",
+    "to-ico": "^1.1.5",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.12",
