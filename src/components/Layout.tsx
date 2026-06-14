@@ -1,37 +1,24 @@
-import { useLayoutEffect } from "react";
-import {
-  createBrowserRouter,
-  NavLink,
-  Outlet,
-  RouterProvider,
-} from "react-router-dom";
+import { useEffect } from "react";
+import { NavLink, Outlet } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
 import { useTheme } from "../hooks/useTheme";
-import Screen404 from "../screens/Screen404";
-import ScreenOverview from "../screens/ScreenOverview";
-import ScreenProjects from "../screens/ScreenProjects";
-import styles from "./App.module.css";
 import { IconHome, IconProject } from "./Icons";
+import styles from "./Layout.module.css";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      { index: true, element: <ScreenOverview /> },
-      { path: "projects", element: <ScreenProjects /> },
-      { path: "*", element: <Screen404 /> },
-    ],
-  },
-]);
-
-function Layout() {
+export default function Layout() {
   const [theme, setTheme] = useTheme();
   const isDarkScheme = useMediaQuery("(prefers-color-scheme: dark)");
   const isDark = theme === "dark" || (theme === "auto" && isDarkScheme);
   const dataTheme = theme === "auto" ? (isDark ? "dark" : "light") : theme;
-  useLayoutEffect(() => {
+
+  useEffect(() => {
     document.documentElement.dataset.theme = dataTheme;
+
+    const themeColor = getComputedStyle(document.documentElement)["backgroundColor"];
+    const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+    if (meta && themeColor) {
+      meta.content = themeColor;
+    }
   }, [dataTheme]);
 
   const createLinks = (
@@ -84,8 +71,4 @@ function Layout() {
       </div>
     </div>
   );
-}
-
-export default function App() {
-  return <RouterProvider router={router} />;
 }

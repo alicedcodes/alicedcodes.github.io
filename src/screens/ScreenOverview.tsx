@@ -32,6 +32,13 @@ export default function ScreenOverview() {
       <p>
         It's {time} on {date} in Brisbane.
       </p>
+
+      <p>
+        I spend my free time making things using{" "}
+        <img src="/icons/typescript.svg" loading="lazy" className="icon" /> JS/TypeScript, and I use{" "}
+        <img src="/icons/react.svg" loading="lazy" className="icon" /> React to make websites like
+        this one.
+      </p>
     </>
   );
 }

@@ -68,8 +68,7 @@
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
+  display: block;
   padding: 2.5rem 1rem;
   width: 100%;
   min-width: 20rem;

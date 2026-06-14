@@ -30,3 +30,9 @@ hr {
   height: 1px;
   background-color: var(--colour-menu-border);
 }
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+}
