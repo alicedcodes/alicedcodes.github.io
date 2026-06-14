@@ -15,6 +15,22 @@ async function buildIcons() {
   await mkdir(PUBLIC, { recursive: true });
 
   await sharp(INPUT).resize(180).png().toFile(join(PUBLIC, "apple-touch-icon.png"));
+  await sharp(INPUT).resize(192).png().toFile(join(PUBLIC, "icon-192.png"));
+  await sharp(INPUT).resize(512).png().toFile(join(PUBLIC, "icon-512.png"));
+
+  await sharp(INPUT)
+    .resize(384, 384, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .extend({
+      top: 64,
+      bottom: 64,
+      left: 64,
+      right: 64,
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    })
+    .png()
+    .toFile(join(PUBLIC, "icon-512-maskable.png"));
+
+  // 3. Open Graph Image
   await sharp(INPUT)
     .resize({
       width: 1280,
@@ -34,7 +50,6 @@ async function buildIcons() {
   }
 
   const masterIcoBuffer = await toIco(icoPngBuffers);
-
   await writeFile(join(PUBLIC, "favicon.ico"), masterIcoBuffer);
 }
 
