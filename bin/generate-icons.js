@@ -18,13 +18,18 @@ async function buildIcons() {
   await sharp(INPUT).resize(192).png().toFile(join(PUBLIC, "icon-192.png"));
   await sharp(INPUT).resize(512).png().toFile(join(PUBLIC, "icon-512.png"));
 
+  const maskablePadding = 72;
+
   await sharp(INPUT)
-    .resize(384, 384, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .resize(512 - maskablePadding * 2, 512 - maskablePadding * 2, {
+      fit: "contain",
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    })
     .extend({
-      top: 64,
-      bottom: 64,
-      left: 64,
-      right: 64,
+      top: maskablePadding,
+      bottom: maskablePadding,
+      left: maskablePadding,
+      right: maskablePadding,
       background: { r: 0, g: 0, b: 0, alpha: 0 },
     })
     .png()

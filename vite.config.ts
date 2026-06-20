@@ -28,8 +28,16 @@ export default defineConfig(({ mode }) => {
           start_url: "/",
           display: "minimal-ui",
           shortcuts: [
-            { name: "Overview", url: "/" },
-            { name: "Projects", url: "/projects" },
+            {
+              name: "Overview",
+              url: "/",
+              icons: [{ src: "shortcut-overview.svg", sizes: "192x192", type: "image/svg+xml" }],
+            },
+            {
+              name: "Projects",
+              url: "/projects",
+              icons: [{ src: "shortcut-projects.svg", sizes: "192x192", type: "image/svg+xml" }],
+            },
           ],
           icons: [
             {
@@ -70,6 +78,8 @@ export default defineConfig(({ mode }) => {
           "icon-192.png",
           "icon-512.png",
           "icon-512-maskable.png",
+          "shortcut-overview.svg",
+          "shortcut-projects.svg",
         ],
       }),
     ],

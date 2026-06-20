@@ -1,1 +1,1 @@
-export { HomeIcon as IconHome, FoldersIcon as IconProject } from "lucide-react";
+export { HomeIcon as IconOverview, FoldersIcon as IconProject } from "lucide-react";

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
 import { useTheme } from "../hooks/useTheme";
-import { IconHome, IconProject } from "./Icons";
+import { IconOverview, IconProject } from "./Icons";
 import styles from "./Layout.module.css";
 
 export default function Layout() {
@@ -41,7 +41,7 @@ export default function Layout() {
       <div className={styles.sidebar}>
         <div className={styles.links}>
           {createLinks([
-            { path: "/", label: "Overview", icon: IconHome },
+            { path: "/", label: "Overview", icon: IconOverview },
             { path: "/projects", label: "Projects", icon: IconProject },
           ])}
         </div>
