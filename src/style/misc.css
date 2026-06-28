@@ -32,7 +32,12 @@ hr {
 }
 
 .icon {
-  width: 1rem;
-  height: 1rem;
+  width: 1.25em;
+  aspect-ratio: 1;
   vertical-align: middle;
+}
+
+.gh-image {
+  border-radius: 50%;
+  width: 3em;
 }

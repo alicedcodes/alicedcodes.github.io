@@ -12,7 +12,7 @@ export default function Layout() {
   const dataTheme = theme === "auto" ? (isDark ? "dark" : "light") : theme;
 
   useEffect(() => {
-    document.documentElement.dataset.theme = dataTheme;
+    document.documentElement.setAttribute("data-theme", dataTheme);
 
     const themeColor = getComputedStyle(document.documentElement)["backgroundColor"];
     const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');

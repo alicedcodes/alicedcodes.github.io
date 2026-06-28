@@ -10,7 +10,10 @@ export default function ScreenOverview() {
 
   return (
     <>
-      <h1>Hey, I'm Alice!</h1>
+      <h1>
+        <img src="https://avatars.githubusercontent.com/alicedcodes" className="icon gh-image" />{" "}
+        Hey, I'm Alice!
+      </h1>
 
       <table>
         <tbody>
@@ -29,9 +32,9 @@ export default function ScreenOverview() {
         </tbody>
       </table>
 
-      <p>
-        It's {time} on {date} in Brisbane.
-      </p>
+      <small>
+        ({time} on {date})
+      </small>
 
       <p>
         I spend my free time making things using{" "}

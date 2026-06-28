@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const getFormattedDateTime = () => {
   const now = new Date();
-  const timeZone = `Australia/Brisbane`;
+  const timeZone = "Australia/Brisbane";
 
   return {
     date: new Intl.DateTimeFormat(undefined, {
@@ -20,23 +20,11 @@ export default function useDateTime() {
   const [dateTime, setDateTime] = useState(getFormattedDateTime);
 
   useEffect(() => {
-    const tick = () => {
+    const intervalId = setInterval(() => {
       setDateTime(getFormattedDateTime());
-    };
+    }, 1000);
 
-    const msUntilNextMinute = 60000 - (Date.now() % 60000);
-
-    let intervalId: number;
-
-    const timeoutId = setTimeout(() => {
-      tick();
-      intervalId = setInterval(tick, 60000);
-    }, msUntilNextMinute);
-
-    return () => {
-      clearTimeout(timeoutId);
-      if (intervalId) clearInterval(intervalId);
-    };
+    return () => clearInterval(intervalId);
   }, []);
 
   return dateTime;
