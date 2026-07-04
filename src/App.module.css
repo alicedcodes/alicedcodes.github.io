@@ -1,0 +1,15 @@
+.app {
+  display: grid;
+  flex: auto;
+  grid-template-areas: 'navbar' 'content';
+  grid-template-rows: 0fr 1fr;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.content {
+  padding: var(--padding4);
+  grid-area: content;
+}

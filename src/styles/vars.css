@@ -1,0 +1,28 @@
+:root {
+  --padding0: 0.125rem;
+  --padding1: 0.25rem;
+  --padding2: 0.5rem;
+  --padding3: 1rem;
+  --padding4: 2rem;
+
+  --border-radius1: 0.25rem;
+  --border-radius2: 0.5rem;
+
+  --font-size0: 0.75rem;
+  --font-size1: 1rem;
+  --font-size2: 1.25rem;
+  --font-size3: 1.5rem;
+
+  --font-sans: Verdana, Geneva, Tahoma, sans-serif;
+
+  color: var(--colour-text, light-dark(#222, #eee));
+  font-family: var(--font-sans);
+  line-height: 1.2;
+  background-color: var(--colour-background, light-dark(#eee, #222));
+  color-scheme: light dark;
+}
+
+a,
+a:visited {
+  color: var(--colour-link);
+}

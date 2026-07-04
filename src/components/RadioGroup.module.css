@@ -1,0 +1,35 @@
+/* TODO: Make ACTUAL style vars for everything (not using header/tab colours for radio buttons) */
+
+.RadioGroup {
+  display: flex;
+  padding: var(--padding1);
+  flex-direction: column;
+  color: var(--colour-text-light);
+  background-color: var(--colour-header);
+  border-radius: var(--border-radius2);
+}
+
+.option {
+  display: flex;
+  padding: var(--padding2);
+  gap: var(--padding2);
+  background-color: inherit;
+  border-radius: var(--border-radius1);
+  cursor: pointer;
+}
+.option:hover {
+  filter: brightness(0.85);
+}
+
+.radio {
+  aspect-ratio: 1;
+  height: 1lh;
+  background-color: var(--colour-tab);
+  border: 0.25em solid transparent;
+  border-radius: 9999px;
+  appearance: none;
+}
+.radio:checked {
+  background-color: var(--colour-header);
+  border-color: currentColor;
+}
