@@ -1,31 +1,44 @@
-import clsx from 'clsx';
-import { FoldersIcon, HomeIcon, SettingsIcon } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
-import styles from './Navbar.module.css';
+import clsx from "clsx";
+import { FoldersIcon, HomeIcon, SettingsIcon } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import styles from "./Navbar.module.css";
+
+interface Page {
+  path: string;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  label?: string;
+  spaceLeft?: true;
+}
 
 export function Navbar({ className }: { className?: string }) {
-  const pages = [
+  const pages: Page[] = [
     {
-      href: '/',
-      label: 'Home',
-      Icon: HomeIcon,
+      path: "/",
+      icon: HomeIcon,
+      label: "About Me",
     },
     {
-      href: '/projects',
-      label: 'Projects',
-      Icon: FoldersIcon,
+      path: "/projects",
+      icon: FoldersIcon,
+      label: "Projects",
     },
     {
-      href: '/settings',
-      Icon: SettingsIcon,
+      path: "/settings",
+      icon: SettingsIcon,
+      spaceLeft: true,
     },
   ];
 
   return (
     <nav className={clsx(styles.navbar, className)}>
-      {pages.map((page) => (
-        <NavLink key={page.href} to={page.href} className={styles.link}>
-          <page.Icon className={styles.icon} />
+      {pages.map(({ icon: Icon, ...page }) => (
+        <NavLink
+          key={page.path}
+          to={page.path}
+          data-space-left={page.spaceLeft}
+          className={styles.tab}
+        >
+          <Icon className={styles.icon} />
           {page.label && <div className={styles.name}>{page.label}</div>}
         </NavLink>
       ))}

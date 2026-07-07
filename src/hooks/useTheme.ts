@@ -1,6 +1,6 @@
-import { useLocalStorage } from 'usehooks-ts';
+import { useLocalStorage } from "usehooks-ts";
 
 export function useTheme() {
-  const [theme, setTheme] = useLocalStorage('theme', 'auto');
+  const [theme, setTheme] = useLocalStorage("theme", "auto");
   return [theme, setTheme] as const;
 }

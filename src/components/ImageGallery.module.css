@@ -1,0 +1,35 @@
+.ImageGallery {
+  max-width: fit-content;
+  margin: var(--padding4) 0;
+  padding: var(--padding2);
+  background-color: var(--colour-header);
+  border-radius: var(--border-radius2);
+  box-shadow: var(--shadow-button);
+}
+
+.inner {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--padding2) var(--padding3);
+  overflow: auto hidden;
+}
+
+.image {
+  aspect-ratio: 1;
+  max-width: 12rem;
+  max-height: 12rem;
+  margin: auto;
+  grid-row: 1;
+  border-radius: var(--border-radius1);
+}
+
+.label {
+  width: 0;
+  min-width: 100%;
+  margin: auto;
+  grid-row: 2;
+  color: var(--colour-text-light);
+  font-size: var(--font-size1);
+  text-align: center;
+}

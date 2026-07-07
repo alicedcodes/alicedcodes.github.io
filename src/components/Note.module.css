@@ -1,0 +1,5 @@
+.Note {
+  color: var(--colour-text-faded);
+  font-weight: normal;
+  font-size: var(--font-size0);
+}

@@ -1,42 +1,66 @@
 .navbar {
+  z-index: 1;
   display: flex;
   height: 2.5rem;
   padding: 0 1rem;
   align-items: flex-end;
   gap: 0.5rem;
   background-color: var(--colour-header);
+  overflow: hidden;
 }
 
-.link {
+.tab {
+  position: relative;
   display: grid;
   height: 2rem;
   align-items: center;
   gap: 0.5rem;
-  text-decoration: none;
-}
-.link:not([aria-current='page']) {
-  margin-bottom: var(--padding1);
   color: var(--colour-text-light);
+  text-decoration: none;
   background-color: var(--colour-tab);
   border-radius: var(--border-radius1);
 }
-.link[aria-current='page'] {
+.tab:not([aria-current="page"]) {
+  margin-bottom: var(--padding1);
+  box-shadow: var(--shadow-button);
+}
+.tab[aria-current="page"] {
   color: var(--colour-text);
   background-color: var(--colour-background);
   border-radius: var(--border-radius2) var(--border-radius2) 0 0;
 }
-.link:has(.name) {
+.tab:has(.name) {
   min-width: 0;
   padding: 0 0.5rem;
-  flex: 0 1 15rem;
+  flex: 0 1 12.5rem;
   grid-template-columns: 0fr 1fr;
 }
-.link:not(:has(.name)) {
+.tab:not(:has(.name)) {
   aspect-ratio: 1;
   grid-template-columns: 1fr;
 }
-.link:last-child {
+.tab[data-space-left="true"] {
   margin-left: auto;
+}
+
+.tab[aria-current="page"]::before,
+.tab[aria-current="page"]::after {
+  --br: var(--border-radius1);
+  position: absolute;
+  bottom: 0;
+  width: calc(var(--br) * 2);
+  height: calc(var(--br) * 2);
+  content: "";
+}
+.tab::before {
+  right: 100%;
+  border-bottom-right-radius: var(--br);
+  box-shadow: var(--br) var(--br) 0 var(--colour-background);
+}
+.tab::after {
+  left: 100%;
+  border-bottom-left-radius: var(--br);
+  box-shadow: calc(-1 * var(--br)) var(--br) 0 0 var(--colour-background);
 }
 
 .icon {

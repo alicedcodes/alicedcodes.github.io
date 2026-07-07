@@ -7,6 +7,7 @@
   color: var(--colour-text-light);
   background-color: var(--colour-header);
   border-radius: var(--border-radius2);
+  box-shadow: var(--shadow-button);
 }
 
 .option {

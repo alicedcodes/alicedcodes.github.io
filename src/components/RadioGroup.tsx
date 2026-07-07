@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import { useId } from 'react';
-import styles from './RadioGroup.module.css';
+import clsx from "clsx";
+import { useId } from "react";
+import styles from "./RadioGroup.module.css";
 
 export type RadioGroupOption = {
   value: string;
@@ -14,11 +14,11 @@ export interface RadioGroupProps {
   onChange: (option: string) => void;
 }
 
-export function RadioGroup({ className, value, options, onChange, ...props }: RadioGroupProps) {
+export function RadioGroup({ className, value, options, onChange }: RadioGroupProps) {
   const name = useId();
 
   return (
-    <div className={clsx(styles.RadioGroup, className)} {...props}>
+    <div className={clsx(styles.RadioGroup, className)}>
       {options.map((option) => (
         <label key={option.value} className={styles.option}>
           <input

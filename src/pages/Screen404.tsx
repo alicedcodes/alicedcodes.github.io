@@ -1,7 +1,7 @@
-import { useTitle } from '../hooks/useTitle';
+import { useTitle } from "../hooks/useTitle";
 
 export function Screen404() {
-  useTitle('404');
+  useTitle("404");
 
   return (
     <main className="content-wide center">

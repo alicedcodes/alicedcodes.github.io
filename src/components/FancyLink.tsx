@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import { Link, type LinkProps } from 'react-router-dom';
-import styles from './FancyLink.module.css';
+import clsx from "clsx";
+import { Link, type LinkProps } from "react-router-dom";
+import styles from "./FancyLink.module.css";
 
 interface FancyLinkProps extends LinkProps {}
 

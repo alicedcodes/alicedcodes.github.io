@@ -1,6 +1,6 @@
-import clsx from 'clsx';
-import type { AnchorHTMLAttributes } from 'react';
-import styles from './FancyLink.module.css';
+import clsx from "clsx";
+import type { AnchorHTMLAttributes } from "react";
+import styles from "./FancyLink.module.css";
 
 interface ExternalLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
 

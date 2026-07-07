@@ -1,0 +1,34 @@
+.rhythmHeavenGroove {
+  color: transparent;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, hsl(300 100% 50%) 20%, hsl(180 100% 50%));
+  background-clip: text;
+}
+
+.pokemonViolet {
+  color: transparent;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, hsl(330 70% 50%) 20%, hsl(280 100% 50%));
+  background-clip: text;
+}
+
+.slayTheSpire2 {
+  color: transparent;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, hsl(90 60% 50%) 20%, hsl(90 15% 40%));
+  background-clip: text;
+}
+
+.silksong {
+  color: transparent;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, hsl(0 100% 55%) 20%, hsl(30 100% 60%));
+  background-clip: text;
+}
+
+.pokemonZA {
+  color: transparent;
+  font-weight: bold;
+  background-image: linear-gradient(180deg, hsl(150 100% 20%) 20%, hsl(150 100% 40%));
+  background-clip: text;
+}

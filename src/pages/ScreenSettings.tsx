@@ -1,9 +1,9 @@
-import { RadioGroup } from '../components/RadioGroup';
-import { useTheme } from '../hooks/useTheme';
-import { useTitle } from '../hooks/useTitle';
+import { RadioGroup } from "../components/RadioGroup";
+import { useTheme } from "../hooks/useTheme";
+import { useTitle } from "../hooks/useTitle";
 
 export function ScreenSettings() {
-  useTitle('Settings');
+  useTitle("Settings");
 
   const [theme, setTheme] = useTheme();
 
@@ -17,16 +17,16 @@ export function ScreenSettings() {
         value={theme}
         options={[
           {
-            value: 'auto',
-            label: 'System default',
+            value: "auto",
+            label: "System default",
           },
           {
-            value: 'light',
-            label: 'Light',
+            value: "light",
+            label: "Light",
           },
           {
-            value: 'dark',
-            label: 'Dark',
+            value: "dark",
+            label: "Dark",
           },
         ]}
         onChange={(value) => setTheme(value)}

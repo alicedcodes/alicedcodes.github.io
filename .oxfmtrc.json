@@ -5,6 +5,5 @@
   },
   "sortPackageJson": {
     "sortScripts": true
-  },
-  "singleQuote": true
+  }
 }

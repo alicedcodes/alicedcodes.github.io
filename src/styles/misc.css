@@ -9,6 +9,13 @@ body,
   flex: auto;
 }
 
+hr {
+  height: 1px;
+  margin: 32px;
+  background-color: var(--colour-text-faded);
+  border: none;
+}
+
 .content-wide {
   max-width: 80rem;
 }
@@ -25,6 +32,7 @@ body,
 }
 
 .text-icon {
+  width: fit-content;
   height: 1lh;
   vertical-align: bottom;
 }

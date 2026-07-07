@@ -1,13 +1,15 @@
-[data-theme='dark'] {
+[data-theme="dark"] {
   --hue-ui: 345;
 
   --colour-background: hsl(var(--hue-ui) 10% 15%);
   --colour-header: hsl(var(--hue-ui) 75% 40%);
   --colour-tab: hsl(var(--hue-ui) 75% 25%);
 
+  --colour-link-text: hsl(var(--hue-ui) 100% 60%);
+
   --colour-text: hsl(0 0% 100%);
   --colour-text-light: hsl(0 0% 95%);
-  --colour-link: hsl(var(--hue-ui) 100% 60%);
+  --colour-text-faded: hsl(0 0% 50%);
 
   color-scheme: dark;
 }
