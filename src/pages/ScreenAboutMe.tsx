@@ -1,12 +1,5 @@
 import { SiGithub } from "@icons-pack/react-simple-icons";
-import {
-  CatIcon,
-  Gamepad2Icon,
-  GamepadIcon,
-  HeartIcon,
-  KeyboardIcon,
-  MusicIcon,
-} from "lucide-react";
+import { Gamepad2Icon, GamepadIcon, KeyboardIcon, MusicIcon } from "lucide-react";
 import { ExternalLink } from "../components/ExternalLink";
 import { ImageGallery } from "../components/ImageGallery";
 import { Note } from "../components/Note";
@@ -15,7 +8,7 @@ import { useTitle } from "../hooks/useTitle";
 import { TIMEZONE } from "../misc/settings";
 import styles from "./ScreenHome.module.css";
 
-export function ScreenHome() {
+export function ScreenAboutMe() {
   useTitle("About Me");
 
   const dateTime = useDateTime();

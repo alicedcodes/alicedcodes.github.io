@@ -1,7 +1,7 @@
 [data-theme="dark"] {
   --hue-ui: 345;
 
-  --colour-background: hsl(var(--hue-ui) 10% 15%);
+  --colour-background: hsl(var(--hue-ui) 5% 15%);
   --colour-header: hsl(var(--hue-ui) 75% 40%);
   --colour-tab: hsl(var(--hue-ui) 75% 25%);
 

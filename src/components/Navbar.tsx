@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { FoldersIcon, HomeIcon, SettingsIcon } from "lucide-react";
+import { FoldersIcon, InfoIcon, SettingsIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
@@ -14,7 +14,7 @@ export function Navbar({ className }: { className?: string }) {
   const pages: Page[] = [
     {
       path: "/",
-      icon: HomeIcon,
+      icon: InfoIcon,
       label: "About Me",
     },
     {

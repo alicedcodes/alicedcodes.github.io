@@ -4,7 +4,7 @@ import { useMediaQuery } from "usehooks-ts";
 import { Navbar } from "./components/Navbar";
 import { useTheme } from "./hooks/useTheme";
 import { Screen404 } from "./pages/Screen404";
-import { ScreenHome } from "./pages/ScreenHome";
+import { ScreenAboutMe } from "./pages/ScreenAboutMe";
 import { ScreenProjects } from "./pages/ScreenProjects";
 import { ScreenSettings } from "./pages/ScreenSettings";
 import styles from "./App.module.css";
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { index: true, element: <ScreenHome /> },
+      { index: true, element: <ScreenAboutMe /> },
       { path: "projects", element: <ScreenProjects /> },
       { path: "settings", element: <ScreenSettings /> },
       { path: "*", element: <Screen404 /> },
