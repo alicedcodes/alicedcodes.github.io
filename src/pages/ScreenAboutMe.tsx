@@ -47,11 +47,11 @@ export function ScreenAboutMe() {
       <ImageGallery
         images={[
           {
-            src: "./bobcat.jpg",
+            src: "./bobcat.webp",
             label: "Bobcat Idiboo",
           },
           {
-            src: "./sylvie.jpg",
+            src: "./sylvie.webp",
             label: "Sylvie Destroyer of Worlds",
           },
         ]}
@@ -92,29 +92,31 @@ export function ScreenAboutMe() {
         </li>
         <li>
           <KeyboardIcon className="text-icon" />{" "}
-          <span className={styles.slayTheSpire2}>Slay the Spire 2</span> <Note>NEW!</Note>
+          <span className={styles.slayTheSpire2}>Slay the Spire 2</span>
         </li>
       </ol>
 
       <hr />
 
       <h2>
-        <MusicIcon className="text-icon" /> Favourite Albums
+        <MusicIcon className="text-icon" /> Music
       </h2>
+
+      <h3>Favourite Artists</h3>
 
       <ImageGallery
         images={[
           {
-            src: "./beatles-love.png",
-            label: "Love (The Beatles)",
+            src: "./the-beatles.webp",
+            label: "The Beatles",
           },
           {
-            src: "./jazz-emu-ego-death.jpg",
-            label: "Ego Death (Jazz Emu)",
+            src: "./jazz-emu.webp",
+            label: "Jazz Emu",
           },
           {
-            src: "./stomachbook-goodnight-hypnopop.jpg",
-            label: "GOODNIGHT HYPNOPOP (STOMACHBOOK)",
+            src: "./astrid.webp",
+            label: "astrid",
           },
         ]}
       />

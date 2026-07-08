@@ -22,6 +22,7 @@
   margin: auto;
   grid-row: 1;
   border-radius: var(--border-radius1);
+  box-shadow: var(--shadow-button);
 }
 
 .label {

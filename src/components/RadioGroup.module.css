@@ -32,5 +32,5 @@
 }
 .radio:checked {
   background-color: var(--colour-header);
-  border-color: currentColor;
+  border-color: var(--colour-text-light);
 }
