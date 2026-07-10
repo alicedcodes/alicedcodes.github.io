@@ -6,7 +6,7 @@ import { Note } from "../components/Note";
 import { useDateTime } from "../hooks/useDateTime";
 import { useTitle } from "../hooks/useTitle";
 import { TIMEZONE } from "../misc/settings";
-import styles from "./ScreenHome.module.css";
+import styles from "./ScreenAboutMe.module.css";
 
 export function ScreenAboutMe() {
   useTitle("About Me");
@@ -18,6 +18,7 @@ export function ScreenAboutMe() {
     hour: "2-digit",
     minute: "2-digit",
   });
+
   const aestDate = dateTime.toLocaleString(undefined, {
     timeZone: TIMEZONE,
     weekday: "long",
@@ -88,7 +89,7 @@ export function ScreenAboutMe() {
         </li>
         <li>
           <Gamepad2Icon className="text-icon" />{" "}
-          <span className={styles.pokemonZA}>Pokémon Z-A</span>
+          <span className={styles.pokemonLegendsZA}>Pokémon Legends Z-A</span>
         </li>
         <li>
           <KeyboardIcon className="text-icon" />{" "}
