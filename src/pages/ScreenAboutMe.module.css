@@ -15,7 +15,7 @@
 
 .rhythmHeavenGroove {
   --colour-gradient-top: hsl(300 100% 50%);
-  --colour-gradient-bottom: hsl(180 100% 50%);
+  --colour-gradient-bottom: hsl(180 90% 45%);
 }
 
 .pokemonViolet {
