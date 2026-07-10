@@ -13,13 +13,13 @@ export function ScreenAboutMe() {
 
   const dateTime = useDateTime();
 
-  const aestTime = dateTime.toLocaleString(undefined, {
+  const aestTime = dateTime.toLocaleString(navigator.language, {
     timeZone: TIMEZONE,
     hour: "2-digit",
     minute: "2-digit",
   });
 
-  const aestDate = dateTime.toLocaleString(undefined, {
+  const aestDate = dateTime.toLocaleString(navigator.language, {
     timeZone: TIMEZONE,
     weekday: "long",
     day: "2-digit",
