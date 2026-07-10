@@ -1,34 +1,39 @@
-.rhythmHeavenGroove {
+.colouredLink {
+  --colour-gradient-top: var(--colour-text);
+  --colour-gradient-bottom: var(--colour-text);
+
   color: transparent;
   font-weight: bold;
-  background-image: linear-gradient(180deg, hsl(300 100% 50%) 20%, hsl(180 100% 50%));
+  text-decoration-color: var(--colour-gradient-bottom);
+  background-image: linear-gradient(
+    180deg,
+    var(--colour-gradient-top) 30%,
+    var(--colour-gradient-bottom)
+  );
   background-clip: text;
+}
+
+.rhythmHeavenGroove {
+  --colour-gradient-top: hsl(300 100% 50%);
+  --colour-gradient-bottom: hsl(180 100% 50%);
 }
 
 .pokemonViolet {
-  color: transparent;
-  font-weight: bold;
-  background-image: linear-gradient(180deg, hsl(330 70% 50%) 20%, hsl(280 100% 50%));
-  background-clip: text;
+  --colour-gradient-top: hsl(330 70% 50%);
+  --colour-gradient-bottom: hsl(280 100% 50%);
 }
 
 .slayTheSpire2 {
-  color: transparent;
-  font-weight: bold;
-  background-image: linear-gradient(180deg, hsl(90 60% 50%) 20%, hsl(90 15% 40%));
-  background-clip: text;
+  --colour-gradient-top: hsl(90 60% 50%);
+  --colour-gradient-bottom: hsl(90 15% 40%);
 }
 
 .silksong {
-  color: transparent;
-  font-weight: bold;
-  background-image: linear-gradient(180deg, hsl(0 100% 55%) 20%, hsl(30 100% 60%));
-  background-clip: text;
+  --colour-gradient-top: hsl(0 100% 50%);
+  --colour-gradient-bottom: hsl(30 100% 60%);
 }
 
 .pokemonLegendsZA {
-  color: transparent;
-  font-weight: bold;
-  background-image: linear-gradient(180deg, hsl(150 100% 20%) 20%, hsl(150 100% 40%));
-  background-clip: text;
+  --colour-gradient-top: hsl(150 100% 20%);
+  --colour-gradient-bottom: hsl(150 100% 40%);
 }

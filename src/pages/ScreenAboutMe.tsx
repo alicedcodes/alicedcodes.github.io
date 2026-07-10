@@ -1,4 +1,5 @@
 import { SiGithub } from "@icons-pack/react-simple-icons";
+import clsx from "clsx";
 import { Gamepad2Icon, GamepadIcon, KeyboardIcon, MusicIcon } from "lucide-react";
 import { ExternalLink } from "../components/ExternalLink";
 import { ImageGallery } from "../components/ImageGallery";
@@ -68,14 +69,28 @@ export function ScreenAboutMe() {
         What Am I Playing? <Note>July, 2026</Note>
       </h3>
 
+      {/* TODO: (concept) Put each game in a case with its cover art. */}
+
       <ul>
         <li>
           <Gamepad2Icon className="text-icon" />{" "}
-          <span className={styles.rhythmHeavenGroove}>Rhythm Heaven Groove</span> <Note>NEW!</Note>
+          <a
+            href="https://www.nintendo.com/my/switch/bflta/"
+            className={clsx(styles.colouredLink, styles.rhythmHeavenGroove)}
+          >
+            Rhythm Heaven Groove
+          </a>{" "}
+          <Note>NEW!</Note>
         </li>
         <li>
           <Gamepad2Icon className="text-icon" />{" "}
-          <span className={styles.pokemonViolet}>Pokémon Violet</span> <Note>(replay)</Note>
+          <a
+            href="https://scarletviolet.pokemon.com/"
+            className={clsx(styles.colouredLink, styles.pokemonViolet)}
+          >
+            Pokémon Violet
+          </a>{" "}
+          <Note>(replay)</Note>
         </li>
       </ul>
 
@@ -84,16 +99,32 @@ export function ScreenAboutMe() {
       <ol>
         <li>
           <Gamepad2Icon className="text-icon" />{" "}
-          <span className={styles.silksong}>Hollow Knight: Silksong</span>{" "}
+          <a
+            href="https://hollowknightsilksong.com/"
+            className={clsx(styles.colouredLink, styles.silksong)}
+          >
+            Hollow Knight: Silksong
+          </a>{" "}
           <Note>Sea of Sorrow tomorrow!</Note>
         </li>
         <li>
           <Gamepad2Icon className="text-icon" />{" "}
-          <span className={styles.pokemonLegendsZA}>Pokémon Legends Z-A</span>
+          {/* TODO: Update to permanent URL (e.g. https://legends.za.pokemon...) when the next Legends game is announced and the site changes. */}
+          <a
+            href="https://legends.pokemon.com/"
+            className={clsx(styles.colouredLink, styles.pokemonLegendsZA)}
+          >
+            Pokémon Legends Z-A
+          </a>
         </li>
         <li>
           <KeyboardIcon className="text-icon" />{" "}
-          <span className={styles.slayTheSpire2}>Slay the Spire 2</span>
+          <a
+            href="https://www.megacrit.com/games/#slay-the-spire-2"
+            className={clsx(styles.colouredLink, styles.slayTheSpire2)}
+          >
+            Slay the Spire 2
+          </a>
         </li>
       </ol>
 
@@ -110,14 +141,17 @@ export function ScreenAboutMe() {
           {
             src: "./the-beatles.webp",
             label: "The Beatles",
+            link: "https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2",
           },
           {
             src: "./jazz-emu.webp",
             label: "Jazz Emu",
+            link: "https://open.spotify.com/artist/69W52X4tUONDDDb6FmGtl6",
           },
           {
             src: "./astrid.webp",
-            label: "astrid",
+            label: "Astrid",
+            link: "https://open.spotify.com/artist/5XnEaGhnWsAywwADYeeZi1",
           },
         ]}
       />

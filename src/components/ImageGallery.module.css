@@ -15,14 +15,28 @@
   overflow: auto hidden;
 }
 
-.image {
-  aspect-ratio: 1;
+.imageWrapper {
+  position: relative;
   max-width: 12rem;
   max-height: 12rem;
+  overflow: hidden;
+}
+
+.image {
+  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
   margin: auto;
   grid-row: 1;
   border-radius: var(--border-radius1);
   box-shadow: var(--shadow-button);
+  transition: filter, transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+.imageWrapper:link:active .image {
+  filter: brightness(0.8);
+  transform: scale(0.95);
 }
 
 .label {
