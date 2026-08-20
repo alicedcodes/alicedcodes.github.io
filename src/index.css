@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@theme {
+  --color-background: var(--color-white);
+  --color-header: var(--color-orange-500);
+
+  --color-text: var(--color-black);
+}
+
 html,
 body,
 #root {
