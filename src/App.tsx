@@ -1,5 +1,7 @@
 import { createSignal, For, Match, onCleanup, onMount, Switch } from "solid-js";
 
+import { AboutPage } from "./pages/AboutPage";
+import { ProjectsPage } from "./pages/ProjectsPage";
 import { cn } from "./utils/cs";
 
 const PAGES: { label: string; path: string }[] = [
@@ -33,16 +35,16 @@ const App = () => {
           )}
         </For>
       </nav>
-      <main class="flex-auto">
+      <div class="flex-auto p-4">
         <Switch>
           <Match when={hash() === ""}>
-            <h1>Projects</h1>
+            <ProjectsPage />
           </Match>
           <Match when={hash() === "about"}>
-            <h1>About</h1>
+            <AboutPage />
           </Match>
         </Switch>
-      </main>
+      </div>
     </div>
   );
 };

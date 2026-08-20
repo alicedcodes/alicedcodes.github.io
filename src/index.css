@@ -14,3 +14,7 @@ body,
 #root {
   height: 100%;
 }
+
+.page {
+  @apply mx-auto max-w-4xl;
+}
