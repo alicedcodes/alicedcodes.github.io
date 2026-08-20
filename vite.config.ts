@@ -1,0 +1,23 @@
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig, lazyPlugins } from "vite-plus";
+import solidPlugin from "vite-plugin-solid";
+import devtools from "solid-devtools/vite";
+
+export default defineConfig({
+  staged: {
+    "*": "vp check --fix",
+  },
+  fmt: {},
+  lint: {
+    jsPlugins: [{ name: "vite-plus", specifier: "vite-plus/oxlint-plugin" }],
+    rules: { "vite-plus/prefer-vite-plus-imports": "error" },
+    options: { typeAware: true, typeCheck: true },
+  },
+  plugins: lazyPlugins(() => [devtools(), solidPlugin(), tailwindcss()]),
+  server: {
+    port: 3000,
+  },
+  build: {
+    target: "esnext",
+  },
+});
