@@ -46,3 +46,29 @@ p {
 .page {
   @apply mx-auto max-w-4xl;
 }
+
+.tab::before,
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: var(--br);
+  height: var(--br);
+  pointer-events: none;
+}
+.tab::before {
+  right: 100%;
+  background: radial-gradient(
+    circle at top left,
+    transparent var(--br),
+    var(--color-app-bg) var(--br)
+  );
+}
+.tab::after {
+  left: 100%;
+  background: radial-gradient(
+    circle at top right,
+    transparent var(--br),
+    var(--color-app-bg) var(--br)
+  );
+}

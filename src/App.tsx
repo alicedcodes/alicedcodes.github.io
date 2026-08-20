@@ -1,12 +1,13 @@
+import { FoldersIcon, InfoIcon, LucideIcon } from "lucide-solid";
 import { createSignal, For, Match, onCleanup, onMount, Switch } from "solid-js";
 
 import { AboutPage } from "./pages/AboutPage";
 import { ProjectsPage } from "./pages/ProjectsPage";
 import { cn } from "./utils/cs";
 
-const PAGES: { label: string; path: string }[] = [
-  { label: "Projects", path: "#" },
-  { label: "About", path: "#about" },
+const PAGES: { label: string; path: string; icon: LucideIcon }[] = [
+  { label: "Projects", path: "#", icon: FoldersIcon },
+  { label: "About", path: "#about", icon: InfoIcon },
 ];
 
 const App = () => {
@@ -20,16 +21,19 @@ const App = () => {
 
   return (
     <div class="flex h-full flex-col bg-app-bg text-app-text">
-      <nav class="z-10 flex h-12 shrink-0 gap-4 bg-header-bg p-2 shadow">
+      <nav class="z-10 flex h-10 shrink-0 gap-2 bg-header-bg px-4">
         <For each={PAGES}>
           {(p) => (
             <a
               class={cn(
-                "flex w-32 items-center justify-center rounded bg-tab-bg text-tab-text shadow",
-                hash() === p.path.substring(1) && "font-bold",
+                "tab relative flex h-8 w-48 items-center gap-1 px-2",
+                hash() === p.path.substring(1)
+                  ? ["self-end rounded-t-md bg-app-bg text-app-text [--br:var(--radius-md)]"]
+                  : ["self-center rounded bg-tab-bg text-tab-text shadow"],
               )}
               href={p.path}
             >
+              <p.icon class="h-5" />
               {p.label}
             </a>
           )}
