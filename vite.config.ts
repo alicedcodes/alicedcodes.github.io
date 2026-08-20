@@ -10,7 +10,7 @@ export default defineConfig({
   },
   fmt: {
     sortPackageJson: { sortScripts: true },
-    sortTailwindcss: { stylesheet: "src/index.css" },
+    sortTailwindcss: { stylesheet: "src/index.css", functions: ["cn"] },
     sortImports: true,
   },
   lint: {
