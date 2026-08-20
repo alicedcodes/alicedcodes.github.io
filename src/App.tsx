@@ -26,7 +26,7 @@ const App = () => {
           {(p) => (
             <a
               class={cn(
-                "tab relative flex h-8 w-48 items-center gap-2 px-2",
+                "tab relative flex h-8 w-48 items-center gap-2 px-2 no-underline",
                 hash() === p.path.substring(1)
                   ? ["self-end rounded-t-md bg-app-bg text-app-text [--br:var(--radius-md)]"]
                   : ["self-center rounded bg-tab-bg text-tab-text shadow"],

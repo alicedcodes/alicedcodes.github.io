@@ -19,10 +19,13 @@ export const ProjectsPage = () => {
     <main class="page">
       <For each={PROJECTS}>
         {(p) => (
-          <a class="flex flex-col overflow-hidden rounded-lg bg-menu shadow" href={p.path}>
+          <a
+            class="flex flex-col overflow-hidden rounded-lg bg-menu text-app-text no-underline shadow"
+            href={p.path}
+          >
             <img class="aspect-120/63" src={p.image} />
             <div class="px-4">
-              <h2>{p.name}</h2>
+              <h2 class="underline">{p.name}</h2>
               <p>{p.description}</p>
             </div>
           </a>

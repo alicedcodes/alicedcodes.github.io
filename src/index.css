@@ -10,64 +10,72 @@
   --color-tab-text: var(--color-white);
 
   --color-menu: var(--color-stone-100);
+
+  --color-link: var(--color-blue-500);
 }
 
-html,
-body,
-#root {
-  @apply h-full;
-}
+@layer base {
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
 
-h1 {
-  @apply my-4 text-4xl font-extrabold;
-}
+  h1 {
+    @apply my-4 text-4xl font-extrabold;
+  }
 
-h2 {
-  @apply my-4 text-3xl font-bold;
-}
+  h2 {
+    @apply my-4 text-3xl font-bold;
+  }
 
-h3 {
-  @apply my-4 text-2xl font-semibold;
-}
+  h3 {
+    @apply my-4 text-2xl font-semibold;
+  }
 
-h4 {
-  @apply my-4 text-xl font-medium;
-}
+  h4 {
+    @apply my-4 text-xl font-medium;
+  }
 
-h5 {
-  @apply my-4 text-lg font-medium;
-}
+  h5 {
+    @apply my-4 text-lg font-medium;
+  }
 
-h6 {
-  @apply my-4 text-base font-medium;
-}
+  h6 {
+    @apply my-4 text-base font-medium;
+  }
 
-p {
-  @apply my-4;
-}
+  p {
+    @apply my-4;
+  }
 
-.page {
-  @apply mx-auto max-w-4xl;
-}
+  a {
+    @apply text-link underline;
+  }
 
-.tab::before,
-.tab::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: calc(2 * var(--br));
-  height: calc(2 * var(--br));
-  clip-path: inset(0);
-}
+  .page {
+    @apply mx-auto max-w-4xl;
+  }
 
-.tab::before {
-  right: 100%;
-  border-bottom-right-radius: var(--br);
-  box-shadow: var(--br) var(--br) 0 var(--color-app-bg);
-}
+  .tab::before,
+  .tab::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: calc(2 * var(--br));
+    height: calc(2 * var(--br));
+    clip-path: inset(0);
+  }
 
-.tab::after {
-  left: 100%;
-  border-bottom-left-radius: var(--br);
-  box-shadow: -0.5px var(--br) 0 var(--br) var(--color-app-bg);
+  .tab::before {
+    right: 100%;
+    border-bottom-right-radius: var(--br);
+    box-shadow: var(--br) var(--br) 0 var(--color-app-bg);
+  }
+
+  .tab::after {
+    left: 100%;
+    border-bottom-left-radius: var(--br);
+    box-shadow: -0.5px var(--br) 0 var(--br) var(--color-app-bg);
+  }
 }
