@@ -1,4 +1,4 @@
-import { FoldersIcon, InfoIcon, LucideIcon } from "lucide-solid";
+import { FoldersIcon, LucideIcon, UserIcon } from "lucide-solid";
 import { createSignal, For, Match, onCleanup, onMount, Switch } from "solid-js";
 
 import { AboutPage } from "./pages/AboutPage";
@@ -7,7 +7,7 @@ import { cn } from "./utils/cs";
 
 const PAGES: { label: string; path: string; icon: LucideIcon }[] = [
   { label: "Projects", path: "#", icon: FoldersIcon },
-  { label: "About", path: "#about", icon: InfoIcon },
+  { label: "About", path: "#about", icon: UserIcon },
 ];
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
           {(p) => (
             <a
               class={cn(
-                "tab relative flex h-8 w-48 items-center gap-1 px-2",
+                "tab relative flex h-8 w-48 items-center gap-2 px-2",
                 hash() === p.path.substring(1)
                   ? ["self-end rounded-t-md bg-app-bg text-app-text [--br:var(--radius-md)]"]
                   : ["self-center rounded bg-tab-bg text-tab-text shadow"],
