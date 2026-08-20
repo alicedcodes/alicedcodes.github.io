@@ -3,7 +3,7 @@ import { createSignal, For, Match, onCleanup, onMount, Switch } from "solid-js";
 
 import { AboutPage } from "./pages/AboutPage";
 import { ProjectsPage } from "./pages/ProjectsPage";
-import { cn } from "./utils/cs";
+import { cn } from "./utils/cn";
 
 const PAGES: { label: string; path: string; icon: LucideIcon }[] = [
   { label: "Projects", path: "#", icon: FoldersIcon },
