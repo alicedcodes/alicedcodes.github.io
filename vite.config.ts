@@ -10,6 +10,7 @@ export default defineConfig({
   },
   fmt: {
     sortPackageJson: { sortScripts: true },
+    sortTailwindcss: { stylesheet: "src/index.css" },
   },
   lint: {
     jsPlugins: [{ name: "vite-plus", specifier: "vite-plus/oxlint-plugin" }],
