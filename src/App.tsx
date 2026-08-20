@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div class="flex h-full flex-col bg-app-bg text-app-text">
-      <nav class="z-10 flex h-10 shrink-0 gap-2 bg-header-bg px-4">
+      <nav class="z-10 flex h-10 shrink-0 gap-2 bg-header px-4">
         <For each={PAGES}>
           {(p) => (
             <a
@@ -39,7 +39,7 @@ const App = () => {
           )}
         </For>
       </nav>
-      <div class="flex-auto p-4">
+      <div class="flex-auto p-8">
         <Switch>
           <Match when={hash() === ""}>
             <ProjectsPage />
