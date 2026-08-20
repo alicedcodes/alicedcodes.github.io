@@ -1,8 +1,8 @@
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig, lazyPlugins } from "vite-plus";
-import solidPlugin from "vite-plugin-solid";
 import devtools from "solid-devtools/vite";
 import { VitePWA } from "vite-plugin-pwa";
+import solidPlugin from "vite-plugin-solid";
+import { defineConfig, lazyPlugins } from "vite-plus";
 
 export default defineConfig({
   staged: {
@@ -11,6 +11,7 @@ export default defineConfig({
   fmt: {
     sortPackageJson: { sortScripts: true },
     sortTailwindcss: { stylesheet: "src/index.css" },
+    sortImports: true,
   },
   lint: {
     jsPlugins: [{ name: "vite-plus", specifier: "vite-plus/oxlint-plugin" }],
