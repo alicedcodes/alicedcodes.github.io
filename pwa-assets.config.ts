@@ -6,7 +6,7 @@ export default defineConfig({
     maskable: {
       ...minimal2023Preset.maskable,
       resizeOptions: {
-        background: "#ff4000",
+        background: "#ff6900",
       },
     },
   },
