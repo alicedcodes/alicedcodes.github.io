@@ -5,12 +5,15 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "vp dev",
-    "dev": "vp dev",
     "build": "vp build",
-    "serve": "vp preview",
+    "dev": "vp dev",
+    "format": "vp format",
+    "generate-pwa-assets": "pwa-assets-generator",
+    "lint": "vp lint",
+    "lint:fix": "vp lint --fix",
     "prepare": "vp config",
-    "generate-pwa-assets": "pwa-assets-generator"
+    "serve": "vp preview",
+    "start": "vp dev"
   },
   "dependencies": {
     "solid-js": "^1.9.9"
