@@ -26,7 +26,7 @@ export default defineConfig({
       manifest: {
         name: "Alice Driscoll",
         short_name: "Alice D",
-        description: "",
+        description: "Alice Driscoll's homepage.",
         display: "standalone",
         orientation: "any",
         icons: [
