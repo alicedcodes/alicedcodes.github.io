@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-app-bg: var(--color-white);
+  --color-app-bg: var(--color-stone-100);
   --color-app-text: var(--color-black);
 
   --color-header: var(--color-orange-500);
@@ -9,7 +9,7 @@
   --color-tab-bg: var(--color-orange-800);
   --color-tab-text: var(--color-white);
 
-  --color-menu: var(--color-stone-100);
+  --color-menu: var(--color-white);
 
   --color-link: var(--color-blue-500);
 }
