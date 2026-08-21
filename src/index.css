@@ -15,7 +15,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  @theme {
+  :root {
     --color-app-bg: var(--color-stone-900);
     --color-app-text: var(--color-white);
 
