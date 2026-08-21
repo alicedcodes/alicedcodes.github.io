@@ -17,6 +17,14 @@
     <meta property="og:title" content="Alice Driscoll" />
     <meta property="og:description" content="Alice Driscoll's homepage." />
     <meta property="og:url" content="https://alicedcodes.github.io" />
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistrations().then((regs) => {
+          for (let i = 0; i < regs.length; i++) registration[i].unregister();
+        });
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
