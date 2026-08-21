@@ -24,6 +24,11 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       manifest: {
+        name: "Alice Driscoll",
+        short_name: "Alice D",
+        description: "",
+        display: "standalone",
+        orientation: "any",
         icons: [
           {
             src: "pwa-64x64.png",
@@ -47,7 +52,31 @@ export default defineConfig({
             purpose: "maskable",
           },
         ],
+        shortcuts: [
+          {
+            name: "Infinite Minesweeper",
+            short_name: "Minesweeper",
+            url: "/infinite-minesweeper/",
+            icons: [
+              {
+                src: "/infinite-minesweeper/icons/android-chrome-192x192.png",
+                sizes: "192x192",
+                type: "image/png",
+                purpose: "any",
+              },
+              {
+                src: "/infinite-minesweeper/icons/android-chrome-512x512.png",
+                sizes: "512x512",
+                type: "image/png",
+                purpose: "any",
+              },
+            ],
+          },
+        ],
+        theme_color: "#ff6900",
       },
+      registerType: "autoUpdate",
+      injectRegister: "inline",
     }),
   ]),
   server: {
