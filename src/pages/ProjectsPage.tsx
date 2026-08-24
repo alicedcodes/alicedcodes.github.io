@@ -9,7 +9,7 @@ const PROJECTS: {
   {
     name: "Infinite Minesweeper",
     description: "A Minesweeper game that never ends.",
-    path: "https://alicedcodes.github.io/infinite-minesweeper",
+    path: "https://alicedcodes.github.io/infinite-minesweeper/",
     image: "https://alicedcodes.github.io/infinite-minesweeper/preview.png",
   },
 ];
