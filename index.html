@@ -17,22 +17,6 @@
     <meta property="og:title" content="Alice Driscoll" />
     <meta property="og:description" content="Alice Driscoll's homepage." />
     <meta property="og:url" content="https://alicedcodes.github.io" />
-
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker
-            .register("/sw.js")
-            .then((registration) => {
-              console.log("SW registered successfully:", registration.scope);
-              registration.update();
-            })
-            .catch((error) => {
-              console.error("SW registration failed:", error);
-            });
-        });
-      }
-    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
