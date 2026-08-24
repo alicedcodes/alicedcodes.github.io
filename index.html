@@ -20,8 +20,16 @@
 
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.getRegistrations().then((regs) => {
-          for (let i = 0; i < regs.length; i++) registration[i].unregister();
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then((registration) => {
+              console.log("SW registered successfully:", registration.scope);
+              registration.update();
+            })
+            .catch((error) => {
+              console.error("SW registration failed:", error);
+            });
         });
       }
     </script>
