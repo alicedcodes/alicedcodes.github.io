@@ -5,23 +5,16 @@ import { useDate } from "../hooks/useDate";
 export const AboutPage = () => {
   const date = useDate();
 
-  const formattedTime = createMemo(() =>
-    date().toLocaleString(navigator.language, {
-      timeZone: "Australia/Brisbane",
-      hour: "2-digit",
-      minute: "2-digit",
-    }),
-  );
+  const formattedDateTime = createMemo(() => {
+    const d = date();
+    const lang = navigator.language;
 
-  const formattedDate = createMemo(() =>
-    date().toLocaleString(navigator.language, {
-      timeZone: "Australia/Brisbane",
-      weekday: "long",
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-    }),
-  );
+    return {
+      time: d.toLocaleString(lang, { hour: "numeric", minute: "2-digit" }),
+      weekday: d.toLocaleString(lang, { weekday: "long" }),
+      date: d.toLocaleString(lang, { day: "numeric", month: "long", year: "numeric" }),
+    };
+  });
 
   return (
     <main class="page">
@@ -29,14 +22,16 @@ export const AboutPage = () => {
         <img
           class="inline h-lh rounded align-bottom shadow"
           src="https://avatars.githubusercontent.com/u/289128204"
+          alt="Alice's Avatar"
         />{" "}
         Hey, I'm Alice!
       </h1>
 
       <p>
         I'm an amateur web developer from <b>Brisbane, Australia</b>, where it is{" "}
-        <b>{formattedTime()}</b> on a <b>{formattedDate()}</b>. I'm <b>genderfluid</b>, though I
-        tend to lean towards <b>she/her</b> pronouns.
+        <b>{formattedDateTime().time}</b> on <b>{formattedDateTime().weekday}</b>,{" "}
+        <b>{formattedDateTime().date}</b>. I'm <b>genderfluid</b>, though I tend to lean towards{" "}
+        <b>she/her</b> pronouns.
       </p>
 
       <p>
