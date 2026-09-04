@@ -3,6 +3,7 @@
 @theme {
   --color-app: var(--color-zinc-800);
   --color-text: var(--color-white);
+  --color-subtle: var(--color-zinc-400);
 
   --color-header: var(--color-emerald-500);
 
