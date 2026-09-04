@@ -6,5 +6,21 @@
 
   --color-header: var(--color-emerald-500);
 
+  --color-link: var(--color-blue-500);
+
   --font-sans: Roboto, sans-serif;
+}
+
+@layer base {
+  a {
+    @apply text-link underline;
+  }
+
+  h2 {
+    @apply my-4 text-3xl font-bold;
+  }
+
+  p {
+    @apply my-4;
+  }
 }
