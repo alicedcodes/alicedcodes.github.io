@@ -6,7 +6,7 @@
 
   --color-header: var(--color-emerald-500);
 
-  --color-link: var(--color-blue-500);
+  --color-link: var(--color-blue-400);
 
   --font-sans: Roboto, sans-serif;
 }
@@ -16,11 +16,17 @@
     @apply text-link underline;
   }
 
-  h2 {
-    @apply my-4 text-3xl font-bold;
-  }
-
+  h2,
   p {
     @apply my-4;
+  }
+
+  h2 {
+    @apply text-3xl font-bold;
+  }
+
+  th,
+  td {
+    @apply border px-1;
   }
 }
