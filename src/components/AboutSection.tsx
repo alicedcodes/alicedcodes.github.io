@@ -9,6 +9,16 @@ export const AboutSection: Component = () => {
         </a>
         About
       </h2>
+
+      <p>
+        Hey, I'm <b>Alice</b>, an amateur <b>web developer</b> from <b>Brisbane, Australia</b>. I'm
+        genderfluid and use she/he/they/it pronouns.
+      </p>
+
+      <p>
+        I write websites in TypeScript using Solid JS and Tailwind CSS. My preferred editor is{" "}
+        <a href="https://zed.dev">Zed</a> and my current OS is Fedora Linux .
+      </p>
     </>
   );
 };
