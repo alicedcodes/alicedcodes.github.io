@@ -3,9 +3,10 @@
 @theme {
   --color-app: var(--color-zinc-800);
   --color-text: var(--color-white);
-  --color-subtle: var(--color-zinc-400);
 
   --color-header: var(--color-emerald-500);
+
+  --color-button: var(--color-emerald-700);
 
   --color-link: var(--color-blue-400);
 
