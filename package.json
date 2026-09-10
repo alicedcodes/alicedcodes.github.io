@@ -7,6 +7,7 @@
     "build": "vp build",
     "dev": "vp dev",
     "format": "vp format",
+    "generate-pwa-assets": "pwa-assets-generator",
     "lint": "vp lint",
     "prepare": "vp config",
     "serve": "vp preview",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.13",
+    "@vite-pwa/assets-generator": "^1.0.2",
     "solid-devtools": "^0.34.3",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
