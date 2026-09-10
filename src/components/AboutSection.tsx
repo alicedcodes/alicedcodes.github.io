@@ -46,7 +46,8 @@ export const AboutSection: Component = () => {
 
       <p>
         I write websites like this one in TypeScript using Solid JS and Tailwind CSS. I use the Zed
-        editor with Fedora Linux as my OS.
+        editor with Fedora Linux as my OS. You can check out my code on{" "}
+        <a href="https://github.com/alicedcodes">GitHub</a>.
       </p>
     </>
   );
