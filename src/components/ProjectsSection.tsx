@@ -12,7 +12,7 @@ const PROJECTS: Project[] = [
     id: "infinite-minesweeper",
     name: "Infinite Minesweeper",
     description:
-      "An infinitely playable game of Minesweeper with features that provider a smoother experience. Playable on the web, it is completely free without sacrificing quality.",
+      "An infinitely playable game of Minesweeper with features that provide a smoother experience. Playable on the web, it is completely free without sacrificing quality.",
     link: "https://alicedcodes.github.io/infinite-minesweeper",
   },
 ];
