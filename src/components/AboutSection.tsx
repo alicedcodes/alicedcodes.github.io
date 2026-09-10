@@ -16,8 +16,8 @@ export const AboutSection: Component = () => {
       </p>
 
       <p>
-        I write websites in TypeScript using Solid JS and Tailwind CSS. My preferred editor is{" "}
-        <a href="https://zed.dev">Zed</a> and my current OS is Fedora Linux .
+        I write websites in TypeScript using Solid JS and Tailwind CSS. My preferred editor is Zed
+        and my current OS is Fedora Linux.
       </p>
     </>
   );
