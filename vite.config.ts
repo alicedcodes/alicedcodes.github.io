@@ -30,6 +30,9 @@ export default defineConfig({
     solidPlugin(),
     tailwindcss(),
     VitePWA({
+      workbox: {
+        navigateFallbackDenylist: [/^\/.+/],
+      },
       manifest: {
         name: "Alice Driscoll",
         short_name: "Alice D",
