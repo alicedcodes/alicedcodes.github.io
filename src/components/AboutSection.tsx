@@ -13,18 +13,11 @@ export const AboutSection: Component = () => {
     return {
       time: d.toLocaleString(navigator.language, {
         timeZone: "Australia/Brisbane",
-        hour: "numeric",
-        minute: "2-digit",
-      }),
-      weekday: d.toLocaleString(navigator.language, {
-        timeZone: "Australia/Brisbane",
-        weekday: "long",
+        timeStyle: "short",
       }),
       date: d.toLocaleString(navigator.language, {
         timeZone: "Australia/Brisbane",
-        day: "numeric",
-        month: "long",
-        year: "numeric",
+        dateStyle: "full",
       }),
     };
   });
@@ -45,9 +38,9 @@ export const AboutSection: Component = () => {
       </p>
 
       <p>
-        I write websites like this one in TypeScript using Solid JS and Tailwind CSS. I use the Zed
-        editor with Fedora Linux as my OS. You can check out my code on{" "}
-        <a href="https://github.com/alicedcodes">GitHub</a>.
+        I make websites in TypeScript utilising SolidJS and TailwindCSS. You can find the code for
+        my open-source projects on <a href="https://github.com/alicedcodes">my GitHub account</a>. I
+        use the Zed editor on Fedora Linux.
       </p>
     </>
   );
