@@ -17,6 +17,19 @@ export default function Document(props: ParentProps) {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
         <title>Alice Driscoll</title>
+        <meta
+          name="description"
+          content="The homepage of Alice Driscoll, an web developer from Australia."
+        />
+        <meta name="author" content="Alice Driscoll" />
+        <link rel="canonical" href="https://alicedcodes.github.io" />
+
+        <meta property="og:title" content="Alice Driscoll" />
+        <meta
+          property="og:description"
+          content="The homepage of Alice Driscoll, an web developer from Australia."
+        />
+        <meta property="og:url" content="https://alicedcodes.github.io" />
 
         <HydrationScript />
       </head>
