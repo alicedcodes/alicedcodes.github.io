@@ -3,4 +3,17 @@
 
 @theme {
   --font-sans: "Inter Variable", sans-serif;
+
+  --color-background: light-dark(var(--color-zinc-100), var(--color-zinc-800));
+  --color-text: light-dark(var(--color-black), var(--color-white));
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply bg-background text-text;
+  }
 }
