@@ -32,6 +32,10 @@
     @apply text-2xl font-semibold;
   }
 
+  h4 {
+    @apply text-xl font-semibold;
+  }
+
   p {
     @apply text-base leading-relaxed;
   }
