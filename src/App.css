@@ -6,6 +6,7 @@
 
   --color-background: light-dark(var(--color-zinc-100), var(--color-zinc-800));
   --color-text: light-dark(var(--color-black), var(--color-white));
+  --color-link: light-dark(var(--color-cyan-600), var(--color-cyan-400));
 }
 
 @layer base {
@@ -15,5 +16,25 @@
 
   body {
     @apply bg-background text-text;
+  }
+
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold;
+  }
+
+  p {
+    @apply text-base leading-relaxed;
+  }
+
+  a {
+    @apply text-link underline;
   }
 }
