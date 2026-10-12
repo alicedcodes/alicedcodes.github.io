@@ -35,6 +35,12 @@ export default function App() {
         —for its high performance and low build size—and <b>TailwindCSS</b>, using{" "}
         <b>vanilla TypeScript</b> for lighter projects.
       </p>
+
+      <p>
+        I run <a href="https://zed.dev">Zed</a> on Fedora Linux for a faster and lighter editor
+        compared to VSCode, paired with Vite+ for JavaScript development, and Git for version
+        control.
+      </p>
     </main>
   );
 }
