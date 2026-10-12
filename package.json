@@ -1,0 +1,37 @@
+{
+  "name": "alicedcodes.github.io",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "vp build",
+    "dev": "vp dev",
+    "format": "vp format",
+    "lint": "vp lint",
+    "prepare": "vp config",
+    "serve": "vp preview"
+  },
+  "dependencies": {
+    "@solidjs/web": "^2.0.0-rc.14",
+    "solid-js": "^2.0.0-rc.14",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@solidjs/diagnostics": "^2.0.0-rc.14",
+    "@solidjs/start-devtools": "^1.0.0-next.4",
+    "@solidjs/vite-plugin": "^3.0.0-next.48",
+    "@tailwindcss/vite": "^4.3.3",
+    "eslint-plugin-solid": "~0.18.1",
+    "typescript": "^5.9.2",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.11.2",
+      "onFail": "download"
+    }
+  }
+}
