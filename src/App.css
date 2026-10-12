@@ -9,6 +9,7 @@
 
   --color-text: light-dark(var(--color-black), var(--color-white));
   --color-link: light-dark(var(--color-cyan-600), var(--color-cyan-400));
+  --color-subtle: light-dark(var(--color-zinc-400), var(--color-zinc-400));
 }
 
 @layer base {
@@ -42,5 +43,9 @@
 
   a {
     @apply text-link underline;
+  }
+
+  hr {
+    @apply border-subtle;
   }
 }
