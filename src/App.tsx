@@ -1,5 +1,6 @@
 import "./App.css";
 import { Introduction } from "./components/Introduction";
+import { Links } from "./components/Links";
 import { Projects } from "./components/Projects";
 
 export default function App() {
@@ -9,6 +10,7 @@ export default function App() {
 
       <hr />
 
+      <Links />
       <Projects />
     </main>
   );
