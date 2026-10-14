@@ -19,7 +19,7 @@ export default function Document(props: ParentProps) {
         <title>Alice Driscoll</title>
         <meta
           name="description"
-          content="The homepage of Alice Driscoll, an web developer from Australia."
+          content="The homepage of Alice Driscoll, a web developer from Australia."
         />
         <meta name="author" content="Alice Driscoll" />
         <link rel="canonical" href="https://alicedcodes.github.io" />
@@ -27,7 +27,7 @@ export default function Document(props: ParentProps) {
         <meta property="og:title" content="Alice Driscoll" />
         <meta
           property="og:description"
-          content="The homepage of Alice Driscoll, an web developer from Australia."
+          content="The homepage of Alice Driscoll, a web developer from Australia."
         />
         <meta property="og:url" content="https://alicedcodes.github.io" />
 
