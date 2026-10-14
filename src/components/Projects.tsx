@@ -25,7 +25,7 @@ const PROJECTS: Project[] = [
 export function Projects() {
   return (
     <>
-      <div class="flex flex-wrap justify-center gap-8">
+      <div class="flex flex-wrap justify-center gap-4">
         <For each={PROJECTS}>
           {(project) => (
             <div class="flex h-48 w-96 flex-col rounded-xl bg-container p-2 shadow">
