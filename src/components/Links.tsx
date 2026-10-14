@@ -18,7 +18,7 @@ export function Links() {
     <div class="flex justify-center gap-8">
       <For each={LINKS}>
         {(link) => (
-          <div class="flex gap-1 rounded-md bg-container p-2">
+          <div class="flex gap-1 rounded-md bg-container p-2 font-bold shadow">
             {link.label}
             <a href={link.url}>
               <ExternalLink />
