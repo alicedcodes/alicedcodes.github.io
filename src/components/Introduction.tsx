@@ -25,6 +25,8 @@ export function Introduction() {
     <>
       <h1>Hi, I'm Alice!</h1>
 
+      <p class="text-sm text-subtle">Also known as Alia...</p>
+
       <p>
         I'm an amateur web developer from Australia, where it's <b>{timeAndDay()}</b>. I make
         websites like this one with{" "}
